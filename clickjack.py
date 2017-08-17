@@ -6,19 +6,7 @@ import time
 import os
 import string
 
-site =''
-while not site :
-   print('Target Site:')
-   site=input()
-   break
-r =urllib.request.urlopen("http://"+site)
-x= r.getheader('X-Frame-Options')
-if (x== "DENY" or x == "SAMEORIGIN"):
-    print("Not Vulnerable to ClickJacking")
-else:
-    print("Bingo! You caught Clickjacking, now exploit it ;) ")
-
-banner = """
+banner="""
 
 #   $$$$$$\  $$\ $$\           $$\          $$$$$\                     $$\                           	#
 #  $$  __$$\ $$ |\__|          $$ |         \__$$ |                    $$ |                          	#	
@@ -36,6 +24,17 @@ banner = """
 Coded By HAXORMAD (AbaRTan DhAKal) ;) 
 Your Very Own ClickJAcking Finder
 """
+print(banner)
 
-
+site =''
+while not site :
+   print('Target Site:')
+   site=input()
+   break
+r =urllib.request.urlopen("http://"+site)
+x= r.getheader('X-Frame-Options')
+if (x== "ALLOW" or x == "allow"):
+    print("Bingo! You caught Clickjacking, now exploit it ;) ")
+else:
+    print("Not Vulnerable to ClickJacking")
 
