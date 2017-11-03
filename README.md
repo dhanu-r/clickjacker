@@ -7,3 +7,5 @@ You Can Find me : fb.com/abartandhakal
                   twitter : @Imhaxormad
                   
 Thanks for using it :D Be sure to modify as per your need :) This is still needed to be improved.
+
+#USAGE : python3 clickjacker.py
