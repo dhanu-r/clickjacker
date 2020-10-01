@@ -31,8 +31,8 @@ while not site :
    print('Target Site:')
    site=input()
    break
-r =urllib.request.urlopen("http://"+site)
-x= r.getheader('X-Frame-Options')
+r =urllib.request.urlopen("http://"+site)      #Online Scanner: https://clickjacker.io/
+x= r.getheader('X-Frame-Options')    
 if (x== "ALLOW" or x == "allow"):
     print("Bingo! You caught Clickjacking, now exploit it ;) ")
 else:
